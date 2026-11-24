@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf3">
+  <title>상품 연출컷 자동화 툴 — JANGJAEWON</title>
+  <link rel="stylesheet" href="styles.css?v=20261114-hover50">
+  <script src="case-study.js" defer></script>
+  <link rel="stylesheet" href="case-study.css">
+  <link rel="stylesheet" href="assets/cutout-case.css?v=20261124-styling-demo-center">
+  <script src="assets/styling-demo.js" defer></script>
+</head>
+<body class="gallery-page cosmetic-case cutout-case styling-case">
+  <div class="viewport">
+<header class="header">
+        <a class="brand" href="./index.html" aria-label="JANGJAEWON 홈">JANGJAEWON</a>
+        <nav class="navigation" aria-label="주 메뉴">
+          <a href="about.html">ABOUT</a>
+          <a href="ai.html" aria-current="page">AI</a>
+          <a href="work.html">WORK</a>
+          <a href="photography.html">PHOTOGRAPHY</a>
+        </nav>
+        <a class="contact" href="contact.html">CONTACT</a>
+      </header>
+
+
+    <main>
+      <section class="cutout-hero case-wrap" aria-labelledby="cutout-title">
+        <div class="cutout-intro">
+          <a class="case-back" href="ai.html">← AI PROJECTS</a>
+          <p class="case-section-label">상품 연출컷 자동화 툴 · 2026</p>
+          <h1 id="cutout-title">어떤 제품이든,<br>사진 한 장이면.</h1>
+          <p class="cutout-lead">제품 이미지만 올리면 자동화 툴가 배경과 주변 소품, 포인트 컬러를 콘셉트별로 무작위 조합해 연출컷을 만듭니다. 원하는 촬영 환경을 미리 정할 필요가 없습니다.</p>
+          <a class="cutout-results-link" href="#cutout-results">생성 결과 보기 <span aria-hidden="true">↓</span></a>
+        </div>
+        <img src="assets/originals/ai-17/styling-06.png.webp" width="1664" height="1662" alt="분홍 테이블 위 손에 든 아크릴 굿즈" loading="eager" decoding="async" class="cutout-hero-image" fetchpriority="high">
+      </section>
+      <section class="cutout-process" aria-labelledby="cutout-process">
+        <div class="case-wrap">
+          <p class="case-section-label">02 / THE SYSTEM</p>
+          <h2 id="cutout-process">연출 조합부터 이미지 생성까지.</h2>
+          <ol class="cutout-steps"><li><span class="case-small-label" aria-hidden="true">01</span>
+            <h3>제품 이미지 올리기</h3><p>연출할 제품 이미지를 올립니다. 제품 설명이나 크기는 필요한 경우에만 입력할 수 있습니다.</p></li><li><span class="case-small-label" aria-hidden="true">02</span>
+            <h3>배경·소품·컬러 자동 조합</h3><p>자동 모드가 콘셉트에 맞는 후보에서 촬영 환경, 소품, 포인트 컬러, 촬영 구도를 무작위로 고릅니다.</p></li><li><span class="case-small-label" aria-hidden="true">03</span>
+            <h3>콘셉트별로 생성하고 비교</h3><p>여러 콘셉트를 한 번에 요청하면 자동화 툴가 순서대로 생성합니다. 이미지마다 다시 생성하거나 이전 결과를 비교할 수 있습니다.</p></li></ol>
+          <details class="case-structure">
+            <summary><span>자동화 툴 구조 더 보기</span><span class="case-structure-shut" aria-hidden="true">닫기</span><span class="case-structure-open" aria-hidden="true">열기</span></summary>
+            <p>콘셉트별 후보에서 고른 연출 요소를 제품 이미지와 함께 촬영 지시로 구성해 OpenRouter 모델에 전달합니다. 수동 모드에서는 원하는 조건을 직접 지정할 수 있고, 생성 결과와 적용된 연출 조건은 콘셉트 카드에서 확인할 수 있습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section class="styling-demo case-wrap" aria-labelledby="styling-demo-title" data-styling-demo hidden>
+        <h2 id="styling-demo-title">자동화 툴은 버튼만 누르면 돼요.</h2>
+        <p>제품을 고르면 배경·소품·포인트 컬러를 조합한 기존 생성 샘플을 보여줍니다.</p>
+        <div class="styling-demo-panel">
+          <form class="styling-demo-controls">
+            <fieldset>
+              <legend>제품 선택</legend>
+              <div class="styling-demo-options"><label><input type="radio" name="demo-product" value="tumbler" checked><span>텀블러</span></label><label><input type="radio" name="demo-product" value="fan"><span>응원 부채</span></label></div>
+            </fieldset>
+            <button type="submit">자동 매칭</button>
+            <dl class="styling-demo-details"><div><dt>촬영 환경</dt><dd data-demo-field="scene">—</dd></div><div><dt>주변 소품</dt><dd data-demo-field="props">—</dd></div><div><dt>포인트 컬러</dt><dd data-demo-field="color">—</dd></div><div><dt>촬영 구도</dt><dd data-demo-field="angle">—</dd></div></dl>
+          </form>
+          <div class="styling-demo-preview" data-demo-preview>
+            <p>샘플 연출컷이 여기에 표시됩니다.</p>
+          </div>
+        </div>
+        <p class="sr-only" role="status" data-demo-status></p>
+        <template data-demo-product="tumbler" data-scene="따뜻한 베이지색 실내" data-props="우드 테이블, 패브릭" data-color="베이지" data-angle="눈높이 근접 촬영"><img src="assets/originals/ai-17/figma-black-tumbler.jpg.webp" width="1000" height="1000" alt="베이지색 실내에 놓인 검은색 텀블러" loading="eager" decoding="async"></template><template data-demo-product="tumbler" data-scene="브라운 스튜디오" data-props="강아지, 패브릭, 간식" data-color="스카이 블루" data-angle="정면 촬영"><img src="assets/originals/ai-17/figma-tumbler-with-dog.png.webp" width="2000" height="2000" alt="강아지와 함께 연출한 흰색 텀블러" loading="eager" decoding="async"></template><template data-demo-product="tumbler" data-scene="검은색 테이블" data-props="빨간 패키지, 스티커" data-color="레드" data-angle="탑뷰"><img src="assets/originals/ai-17/figma-red-tumbler-styling.png.webp" width="2000" height="2000" alt="빨간 패키지 옆 손에 든 흰색 텀블러" loading="eager" decoding="async"></template><template data-demo-product="fan" data-scene="검은색 테이블" data-props="포토카드, 참 장식, 피규어" data-color="터쿼이즈" data-angle="탑뷰"><img src="assets/originals/ai-17/styling-25.png.webp" width="1662" height="1662" alt="검은 배경 위 응원 부채와 포토카드" loading="eager" decoding="async"></template><template data-demo-product="fan" data-scene="밝은 작업 책상" data-props="태블릿, 연필, 비즈 스트랩" data-color="파스텔 블루" data-angle="사선 탑뷰"><img src="assets/originals/ai-17/figma-illustrated-fan.jpg.webp" width="1000" height="1000" alt="태블릿 옆 손에 든 일러스트 부채" loading="eager" decoding="async"></template><template data-demo-product="fan" data-scene="밝은 테이블" data-props="검은 인형, 포토카드, 리본" data-color="레드" data-angle="사선 탑뷰"><img src="assets/originals/ai-17/figma-photo-fan.jpg.webp" width="1000" height="1000" alt="검은 인형과 포토카드 옆 손에 든 응원 부채" loading="eager" decoding="async"></template>
+      </section>
+      <section class="case-results case-wrap" id="cutout-results" aria-labelledby="cutout-gallery">
+        <header class="case-results-title">
+          <div><p class="case-section-label">03 / THE OUTCOME</p><h2 id="cutout-gallery">제품마다 달라지는 연출.</h2></div>
+          
+        </header>
+        
+        <p class="case-result-count sr-only" role="status">12 IMAGES</p>
+        <section class="case-result-group" id="cutout-product-styled" data-result-group="styled" aria-label="생성 결과">
+          
+          
+          <figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-01.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="분홍색 캐릭터 문구와 포토카드" aria-label="분홍색 캐릭터 문구와 포토카드 크게 보기">
+                <img src="assets/originals/ai-17/styling-01.png.webp" width="1383" height="1383" alt="분홍색 캐릭터 문구와 포토카드" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-02.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="카메라와 스티커를 배치한 문구 연출" aria-label="카메라와 스티커를 배치한 문구 연출 크게 보기">
+                <img src="assets/originals/ai-17/styling-02.png.webp" width="1383" height="1383" alt="카메라와 스티커를 배치한 문구 연출" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-03.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="책상 위 캐릭터 스티커" aria-label="책상 위 캐릭터 스티커 크게 보기">
+                <img src="assets/originals/ai-17/styling-03.png.webp" width="1383" height="1383" alt="책상 위 캐릭터 스티커" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-04.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="노트 옆 캐릭터 스티커" aria-label="노트 옆 캐릭터 스티커 크게 보기">
+                <img src="assets/originals/ai-17/styling-04.png.webp" width="1383" height="1383" alt="노트 옆 캐릭터 스티커" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/figma-black-tumbler.jpg.webp" target="_blank" rel="noopener" data-lightbox data-caption="베이지색 실내에 놓인 검은색 텀블러" aria-label="베이지색 실내에 놓인 검은색 텀블러 크게 보기">
+                <img src="assets/originals/ai-17/figma-black-tumbler.jpg.webp" width="1000" height="1000" alt="베이지색 실내에 놓인 검은색 텀블러" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/figma-tumbler-with-dog.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="강아지와 함께 연출한 흰색 텀블러" aria-label="강아지와 함께 연출한 흰색 텀블러 크게 보기">
+                <img src="assets/originals/ai-17/figma-tumbler-with-dog.png.webp" width="2000" height="2000" alt="강아지와 함께 연출한 흰색 텀블러" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-26.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="손에 든 가족 사진 카드" aria-label="손에 든 가족 사진 카드 크게 보기">
+                <img src="assets/originals/ai-17/styling-26.png.webp" width="3064" height="3064" alt="손에 든 가족 사진 카드" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/figma-red-tumbler-styling.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="빨간 패키지 옆 손에 든 흰색 텀블러" aria-label="빨간 패키지 옆 손에 든 흰색 텀블러 크게 보기">
+                <img src="assets/originals/ai-17/figma-red-tumbler-styling.png.webp" width="2000" height="2000" alt="빨간 패키지 옆 손에 든 흰색 텀블러" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-06.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="분홍 테이블 위 손에 든 아크릴 굿즈" aria-label="분홍 테이블 위 손에 든 아크릴 굿즈 크게 보기">
+                <img src="assets/originals/ai-17/styling-06.png.webp" width="1664" height="1662" alt="분홍 테이블 위 손에 든 아크릴 굿즈" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/styling-25.png.webp" target="_blank" rel="noopener" data-lightbox data-caption="검은 배경 위 응원 부채와 포토카드" aria-label="검은 배경 위 응원 부채와 포토카드 크게 보기">
+                <img src="assets/originals/ai-17/styling-25.png.webp" width="1662" height="1662" alt="검은 배경 위 응원 부채와 포토카드" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/figma-illustrated-fan.jpg.webp" target="_blank" rel="noopener" data-lightbox data-caption="태블릿 옆 손에 든 일러스트 부채" aria-label="태블릿 옆 손에 든 일러스트 부채 크게 보기">
+                <img src="assets/originals/ai-17/figma-illustrated-fan.jpg.webp" width="1000" height="1000" alt="태블릿 옆 손에 든 일러스트 부채" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure><figure class="case-result-card">
+              <a href="assets/originals/ai-17/figma-photo-fan.jpg.webp" target="_blank" rel="noopener" data-lightbox data-caption="검은 인형과 포토카드 옆 손에 든 응원 부채" aria-label="검은 인형과 포토카드 옆 손에 든 응원 부채 크게 보기">
+                <img src="assets/originals/ai-17/figma-photo-fan.jpg.webp" width="1000" height="1000" alt="검은 인형과 포토카드 옆 손에 든 응원 부채" loading="lazy" decoding="async"><span class="case-enlarge" aria-hidden="true">↗</span>
+              </a>
+            </figure>
+          
+        </section>
+      </section>
+    </main>
+    <dialog class="case-lightbox" aria-label="생성 이미지 원본 확대">
+      <div class="case-lightbox-bar"><p data-lightbox-caption></p><button type="button" data-lightbox-close aria-label="확대 이미지 닫기">닫기 ×</button></div>
+      <div class="case-lightbox-stage"><button type="button" data-lightbox-prev aria-label="이전 이미지">←</button><img alt=""><button type="button" data-lightbox-next aria-label="다음 이미지">→</button></div>
+      <div class="case-lightbox-bottom"><span data-lightbox-index></span><a data-lightbox-original target="_blank" rel="noopener">원본 열기 ↗</a></div>
+    </dialog>
+  </div>
+</body>
+</html>

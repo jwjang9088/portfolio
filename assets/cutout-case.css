@@ -1,0 +1,194 @@
+.cutout-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  min-height: 626px;
+  overflow: clip;
+  padding-block: 32px 56px;
+}
+.cutout-hero-image {
+  position: absolute;
+  inset: auto auto 0 72.59%;
+  display: block;
+  width: min(46.94%, 534px);
+  height: auto;
+  /* The 716px Figma layer extends 77px below the hero boundary. */
+  transform: translate(-50%, 10.75%);
+}
+.cutout-intro { padding-bottom: 26px; }
+.cutout-intro .case-section-label { margin-top: 28px; }
+.cutout-intro h1 {
+  margin: 18px 0 0;
+  color: var(--case-ink);
+  font-size: clamp(36px, 4.45vw, 66px);
+  line-height: 1.2;
+  letter-spacing: -.065em;
+  word-break: keep-all;
+}
+.cutout-lead {
+  max-width: 390px;
+  margin: 23px 0 16px;
+  font-size: 15px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+.cutout-results-link {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  min-height: 44px;
+  color: var(--case-ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+.cutout-process .case-section-label { margin-bottom: 24px; }
+.cutout-process { background: #f1e7df; padding-block: 68px 56px; }
+.cutout-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 33px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cutout-steps li { padding: 25px; background: #fcfaf3b0; border-radius: 14px; }
+.cutout-steps h3 { margin: 12px 0 8px; color: var(--case-ink); font-size: clamp(17px, 2vw, 23px); }
+.cutout-steps p, .cutout-process details p { margin: 0; font-size: 13px; line-height: 1.9; word-break: keep-all; }
+.cutout-process .case-structure { margin-top: 38px; }
+.cutout-process details p { max-width: 68ch; }
+.cutout-case .case-filter { min-height: 44px; }
+.cutout-reference-panel, .cutout-generated-heading, .cutout-case .case-results-note { grid-column: 1 / -1; }
+.cutout-case .case-results-note { margin: 12px 0 0; color: inherit; }
+.cutout-reference-panel {
+  padding: clamp(16px, 2.25vw, 26px);
+  border: 1px solid var(--case-line);
+  border-radius: 14px;
+  background: #f1e7df66;
+  text-align: center;
+}
+.cutout-reference-panel h3, .cutout-generated-heading {
+  margin: 0;
+  color: var(--case-ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.cutout-reference-photos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px; }
+.cutout-reference-photos img {
+  display: block;
+  width: clamp(72px, 11vw, 140px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #eee6de;
+}
+.cutout-generated-heading { margin-top: 12px; }
+.cutout-case .case-result-card > a { border-radius: 12px; }
+.styling-case .cutout-hero { gap: clamp(28px, 5vw, 80px); }
+.styling-case .cutout-hero-image {
+  position: static;
+  justify-self: end;
+  width: min(100%, 534px);
+  border-radius: 20px;
+  transform: none;
+}
+.styling-case .case-result-card > a { aspect-ratio: 1; }
+.styling-case .case-results-title { margin-bottom: 45px; }
+.styling-demo { padding-block: clamp(44px, 7vw, 88px) 0; }
+.styling-demo > h2,
+.styling-demo > p:not(.sr-only) { text-align: center; }
+.styling-demo > p:not(.sr-only) {
+  margin: 14px 0 24px;
+  font-size: 14px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+.styling-demo-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+  align-items: start;
+  gap: clamp(20px, 4vw, 56px);
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(18px, 3vw, 36px);
+  border: 1px solid var(--case-line);
+  border-radius: 18px;
+  background: #f1e7df66;
+}
+.styling-demo-controls fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.styling-demo-controls legend { margin-bottom: 10px; padding: 0; font-size: 13px; font-weight: 700; }
+.styling-demo-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.styling-demo-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding-inline: 12px;
+  border: 1px solid var(--case-line);
+  border-radius: 24px;
+  background: var(--paper);
+  cursor: pointer;
+  font-size: 13px;
+}
+.styling-demo-options label:has(:checked) { border-color: var(--case-ink); color: var(--case-ink); }
+.styling-demo-options input { margin: 0; accent-color: var(--case-ink); }
+.styling-demo-controls button {
+  width: 100%;
+  min-height: 44px;
+  margin-block: 15px 20px;
+  padding-inline: 16px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--case-ink);
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.styling-demo-controls button:focus-visible { outline: 2px solid var(--case-ink); outline-offset: 3px; }
+.styling-demo-details { margin: 0; font-size: 12px; }
+.styling-demo-details div {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 8px;
+  padding-block: 8px;
+  border-top: 1px solid var(--case-line);
+}
+.styling-demo-details dt { font-weight: 700; color: var(--case-ink); }
+.styling-demo-details dd { margin: 0; overflow-wrap: anywhere; }
+.styling-demo-preview {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--case-line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.styling-demo-preview p { margin: 14px; color: var(--case-muted); text-align: center; font-size: 13px; }
+.styling-demo-preview img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+@media (max-width: 900px) {
+  .cutout-hero { min-height: 470px; }
+}
+@media (max-width: 760px) {
+  .styling-demo-panel { grid-template-columns: 1fr; max-width: 480px; }
+  .cutout-hero { grid-template-columns: 1fr; min-height: 0; padding-block: 12px 0; }
+  .cutout-hero-image { position: static; width: min(100%, 400px); justify-self: center; transform: none; }
+  .styling-case .cutout-hero { padding-bottom: 36px; }
+  .styling-case .cutout-hero-image { justify-self: center; width: min(100%, 480px); }
+  .styling-case .case-results-title { margin-bottom: 24px; }
+  .cutout-intro { padding-bottom: 0; }
+  .cutout-intro .case-section-label { margin-top: 14px; }
+  .cutout-intro h1 { font-size: clamp(34px, 7.5vw, 48px); }
+  .cutout-lead { margin-block: 16px 5px; font-size: 13px; }
+  .cutout-process { padding-block: 44px; }
+  .cutout-steps { grid-template-columns: 1fr; margin-top: 20px; }
+  .cutout-steps li { padding: 19px; }
+}
+@media (max-width: 420px) {
+  .cutout-case .case-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
