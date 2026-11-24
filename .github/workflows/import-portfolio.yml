@@ -1,0 +1,29 @@
+name: Import portfolio site
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import the verified Pages archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test ! -e index.html
+          asset=$(gh api "repos/$GITHUB_REPOSITORY/releases" --jq '[.[] | select(.draft and .name == "Portfolio Pages build 2026-11-24") | .assets[] | select(.name == "portfolio-pages-public.zip" and .state == "uploaded") | .id] | if length == 1 then .[0] else empty end')
+          test -n "$asset"
+          archive="$RUNNER_TEMP/portfolio-pages-public.zip"
+          gh api -H 'Accept: application/octet-stream' "repos/$GITHUB_REPOSITORY/releases/assets/$asset" > "$archive"
+          printf '%s  %s\n' 6d11bf8370f6bad5b9e0b2baa060b5cae0b0ede37c8e64d1e4b4436824d47d34 "$archive" | sha256sum --check --strict
+          unzip -q "$archive"
+          test -f index.html
+          test -f .nojekyll
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .nojekyll ./*.html ./*.css ./*.js assets/
+          git commit -m 'Publish JANGJAEWON portfolio'
+          git push origin HEAD:main
